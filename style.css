@@ -7,18 +7,28 @@
 body {
   color: #343a40;
   font-family: "PT Serif", "Poppins", serif;
-  width: 1200px;
+  height: 100vh;
   line-height: 1;
+  width: 1200px;
   margin: auto;
   font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 .team-intro {
   height: 200px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
 
-  margin: 100px 0;
+  grid-template-columns: 1fr 1fr;
+
+  /* margin: 100px 0; */
 }
 
 .team-description {
@@ -41,16 +51,21 @@ body {
 .team-text {
   font-size: 16px;
   color: #495057;
+  text-align: left;
   line-height: 1.5;
   font-weight: 400;
+  width: 60%;
+  font-weight: 500;
 }
 
 .team {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 550px);
+  grid-template-rows: repeat(3, 570px);
   /* gap: 80px; */
   row-gap: 50px;
+  column-gap: 50px;
 }
 
 .team > *:nth-child(2) {
@@ -66,7 +81,7 @@ body {
 }
 
 .member-wrapper img {
-  width: 280px;
+  width: 330px;
   margin-bottom: 16px;
 }
 
@@ -83,6 +98,23 @@ body {
   transform: rotate(90deg) translate(85%, 100%);
   transform-origin: bottom right;
   position: absolute;
-  right: 20%;
+  right: 0%;
   top: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .team-intro {
+    grid-template-columns: 1fr;
+    justify-content: start;
+
+    /* margin: 100px 0; */
+  }
+
+  .text-text {
+    width: 100%;
+  }
+
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
