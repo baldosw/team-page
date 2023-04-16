@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #343a40;
+  font-family: "PT Serif", "Poppins", serif;
+  width: 1200px;
+  line-height: 1;
+  margin: auto;
+  font-size: 16px;
+}
+
+.team-intro {
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  margin: 100px 0;
+}
+
+.team-description {
+  font-family: "Poppins";
+  margin-left: auto;
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.team-subtitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 23px;
+}
+
+.team-text {
+  font-size: 16px;
+  color: #495057;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 550px);
+  /* gap: 80px; */
+  row-gap: 50px;
+}
+
+.team > *:nth-child(2) {
+  align-self: end;
+}
+
+.team > *:nth-child(5) {
+  align-self: end;
+}
+
+.member-wrapper {
+  position: relative;
+}
+
+.member-wrapper img {
+  width: 280px;
+  margin-bottom: 16px;
+}
+
+.member-wrapper .member-name {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Poppins";
+}
+
+.member-wrapper .member-position {
+  font-size: 18px;
+  text-transform: uppercase;
+
+  transform: rotate(90deg) translate(85%, 100%);
+  transform-origin: bottom right;
+  position: absolute;
+  right: 20%;
+  top: 0;
+}
